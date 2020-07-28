@@ -1,48 +1,60 @@
 <mat-toolbar color="primary">
     <span class="fill-remaining-space"></span>
-    <span >Create User</span>
+    <span >Add User</span>
     <span class="fill-remaining-space"></span>
   </mat-toolbar><br>
-<mat-form-field >
-  <mat-label>First Name</mat-label>
-  <input matInput>
-</mat-form-field>
-&nbsp;&nbsp;
-<mat-form-field floatLabel="auto">
-    <mat-label>Last Name</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br>
-<mat-form-field floatLabel="auto">
-    <mat-label>Email</mat-label>
-    <input matInput>
-  </mat-form-field>
-  &nbsp;&nbsp;
-<mat-form-field floatLabel="auto">
-    <mat-label>Phone Number</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br>
-<mat-form-field floatLabel="auto">
-    <mat-label>Address</mat-label>
-    <input matInput>
-  </mat-form-field>
-  <br>
-<mat-form-field floatLabel="auto">
-    <mat-label>State</mat-label>
-    <input matInput>
-  </mat-form-field>
-  &nbsp;&nbsp;
-<mat-form-field floatLabel="auto">
-    <mat-label>city</mat-label>
-    <input matInput>
-  </mat-form-field>
-  &nbsp;&nbsp;
-<mat-form-field floatLabel="auto">
-    <mat-label>Country</mat-label>
-    <input matInput>
-  </mat-form-field>
-<br>
-<button mat-raised-button color="primary" align="end">Cancel</button>
-&nbsp; &nbsp; &nbsp;
-<button mat-raised-button color="primary" align="end">Save</button>
+  <form class="example-form">
+
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr></table>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput  placeholder="Ex. pat@example.com">
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Telephone</mat-label>
+      <span matPrefix>+1 &nbsp;</span>
+      <input type="tel" matInput placeholder="555-555-1234">
+      <mat-icon matSuffix></mat-icon>
+    </mat-form-field>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+      </mat-form-field>
+    </p>
+
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Ex. San Francisco">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Ex. California">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Country</mat-label>
+        <input matInput placeholder="Ex. America">
+      </mat-form-field></td>
+
+    </tr></table>
+  </form>
