@@ -9,7 +9,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -29,7 +29,6 @@ import {MatInputModule} from '@angular/material/input'
 
 
 
-
   ],
   exports: [
     CommonModule,
@@ -40,7 +39,8 @@ import {MatInputModule} from '@angular/material/input'
     MatDialogModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+
 
 
   ]
