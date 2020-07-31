@@ -10,6 +10,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTableModule} from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +27,7 @@ import {MatInputModule} from '@angular/material/input';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule
 
 
 
@@ -40,7 +42,7 @@ import {MatInputModule} from '@angular/material/input';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-
+    FormsModule
 
 
   ]
